@@ -4,5 +4,8 @@ A Scholarship Portal, where
 * **College** verifies the student's applications belonging to that college
 * **Admin** Sanctions the Scholarship to the applications verified by college 
 
+## Schema
+![](data/schema.png)
+
 ## Requirements
 * Xampp
