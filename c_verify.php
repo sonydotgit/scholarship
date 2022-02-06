@@ -34,7 +34,7 @@ SOFTWARE.
 		$sql_dec = "UPDATE application SET status='declined' WHERE app_id='$id_to_update'";
 
 		if(mysqli_query($conn, $sql_dec)){
-			header('Location: c_app.php');
+			header('Location: index.php');
 		} else {
 			echo 'query error: '. mysqli_error($conn);
 		}
@@ -49,7 +49,7 @@ SOFTWARE.
 		$sql_ver = "UPDATE application SET status='verified' WHERE app_id='$id_to_update'";
 
 		if(mysqli_query($conn, $sql_ver)){
-			header('Location: c_app.php');
+			header('Location: index.php');
 		} else {
 			echo 'query error: '. mysqli_error($conn);
 		}
@@ -102,7 +102,7 @@ SOFTWARE.
 	</div>
 
 	<div class="container center">
-		<form action="verify.php" method="POST">
+		<form action="c_verify.php" method="POST">
 				<input type="hidden" name="status_id" value="<?php echo $app['app_id']; ?>">
 				<input type="submit" name="decline" value="Decline" class="btn brand z-depth-0">
 				<input type="submit" name="verify" value="Verify" class="btn brand z-depth-0">
