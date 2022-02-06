@@ -28,7 +28,7 @@ SOFTWARE.
 
 	<?php include('templates/header.php'); ?>
 
-	<div class="container center">
+	<div class="container">
 		<p>A Scholarship Portal where: </p>
 		<ul>
 			<li>Student: Applies for scholarship.</li>
@@ -36,6 +36,7 @@ SOFTWARE.
 			<li>Admin: Approves/Sanctions the scholarship.</li>
 		</ul>
 		<p>THIS IS JUST A PROTOTYPE.</p>
+		<a href="https://github.com/sonydotgit/scholarship">Github</a>
 	</div>
 	<div class="container center grey-text">
 		<p>Made with &#10084; by Sohan</p>
