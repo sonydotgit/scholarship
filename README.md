@@ -31,3 +31,6 @@ Fireup the browser and go to index.php
 ```
 firefox localhost/scholarship/index.php
 ```
+## Issues
+* After verifying/declining in c_verify.php, user gets redirected to index.php which requires the user to login again to verify/decline other applications.
+* a_app.php can be accessed directly by entering the url [ http://localhost/scholarship/a_app.php ]
