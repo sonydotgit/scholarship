@@ -16,7 +16,6 @@ start xampp
 /opt/lampp/xampp start
 ```
 ---
-```
 Extract the code in /opt/lampp/htdocs
 ```
 cd /opt/lampp/htdocs
