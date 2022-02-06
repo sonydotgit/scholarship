@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 05, 2022 at 08:16 PM
+-- Generation Time: Feb 06, 2022 at 10:32 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.14
 
@@ -60,9 +60,6 @@ CREATE TABLE `application` (
 --
 
 INSERT INTO `application` (`app_id`, `c_code`, `s_name`, `aadhar`, `reg_no`, `prev_year_perc`, `status`) VALUES
-('1642939005', 'jgidvg1234', 'Anakin', '098765432109', '4bd19jd121', '100', 'verified'),
-('1642955767', 'bietdvg123', 'Satya Nadella', '388620173849', '4BD19CS098', '70', 'declined'),
-('1643795753', 'bietdvg123', 'Dinesh Narayan', '444488881212', '4BD19CS025', '89', 'Application Submitted'),
 ('1643877913', 'bietdvg123', 'Bussa Guru', '123456789012', '4bd19cs111', '98', 'Sanctioned'),
 ('1643881998', 'bietdvg123', 'Dinjari', '098765432134', '4bd19ec001', '99', 'Application Submitted'),
 ('1643885995', 'bietdvg123', 'Sohan', '341215767451', '4bd19cs101', '97', 'Sanctioned');
@@ -122,13 +119,6 @@ CREATE TABLE `feedback` (
   `ratings` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `feedback`
---
-
-INSERT INTO `feedback` (`app_id`, `comments`, `ratings`) VALUES
-('1642938844', 'Feedback I give.', 10);
-
 -- --------------------------------------------------------
 
 --
@@ -146,13 +136,6 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`app_id`, `ph_no`, `S_password`) VALUES
-('1642938844', '1234567890', 'iSuck'),
-('1642939005', '0987654321', 'uSuck'),
-('1642955521', '9762736696', 'scholarPass'),
-('1642955767', '6339725798', 'Passwordsits'),
-('1643795753', '6969696969', '69Nice'),
-('1643796158', '7483186254', '4bd19cs093'),
-('1643796216', '7483186254', '4bd19cs093'),
 ('1643877913', '9887624476', 'pAss123'),
 ('1643881998', '9026685598', 'LastPass'),
 ('1643885995', '9876543210', '123Pass');
