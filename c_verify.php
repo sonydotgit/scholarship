@@ -61,7 +61,7 @@ SOFTWARE.
 		$id = mysqli_real_escape_string($conn, $_POST['app_id']);
 
 		// make sql
-		$sql = "SELECT * FROM application WHERE app_id = $id";
+		$sql = "SELECT a.app_id, a.s_name, a.c_code, a.aadhar, a.reg_no, a.prev_year_perc, a.status, b.ifsc, b.acc_no, b.b_name FROM application a, bank_detail b WHERE a.app_id=b.app_id AND b.app_id='$id'";
 
 		// get the query result
 		$result = mysqli_query($conn, $sql);
@@ -90,7 +90,10 @@ SOFTWARE.
 			<p>College Code&#58; <?php echo $app['c_code']; ?></p>
 			<p>Aadhar&#58; <?php echo $app['aadhar']; ?></p>
 			<p>USN&#58; <?php echo $app['reg_no']; ?></p>
-			<p>Previous Year &#37;&#58; <?php echo $app['prev_year_perc']; ?></p>
+			<p>Previous Year&#37;&#58; <?php echo $app['prev_year_perc']; ?></p>
+			<p>Bank Name&#58; <?php echo $app['b_name']; ?></p>
+			<p>IFSC&#58; <?php echo $app['ifsc']; ?></p>
+			<p>Account Number&#58; <?php echo $app['acc_no']; ?></p>
 			<h5>Status&#58; <?php echo $app['status']; ?></h5>
 
 		<?php else: ?>
