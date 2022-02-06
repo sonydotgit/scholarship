@@ -37,6 +37,9 @@ SOFTWARE.
 		</ul>
 		<p>THIS IS JUST A PROTOTYPE.</p>
 	</div>
+	<div class="container center grey-text">
+		<p>Made with &#10084; by Sohan</p>
+	</div>
 
 	<?php include('templates/footer.php'); ?>
 
