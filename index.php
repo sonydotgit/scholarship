@@ -20,7 +20,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE. 
+SOFTWARE.
 -->
 
 <?php
@@ -33,7 +33,7 @@ SOFTWARE.
 					'ifsc' => '', 'acc_no' => '', 'b_name' => '');
 
 	if(isset($_POST['submit'])){
-		
+
 		// check Phone Number
 		if(empty($_POST['phno'])){
 			$errors['phno'] = 'Phone Number is required';
@@ -135,7 +135,7 @@ SOFTWARE.
 			$sql = "INSERT INTO application VALUES('$app_id', '$c_code', '$s_name', '$aadhar', '$reg_no', '$prev_year_perc', 'Application Submitted')";
 
 			if(mysqli_query($conn, $sql)){
-				
+
 			} else {
 				echo 'query error: '. mysqli_error($conn);
 			}
@@ -150,7 +150,7 @@ SOFTWARE.
 			} else {
 				echo 'query error: ' . mysqli_error($conn);
 			}
-			
+
 		}
 
 	} // end POST check
@@ -159,45 +159,45 @@ SOFTWARE.
 
 <!DOCTYPE html>
 <html>
-	
+
 	<?php include('templates/header.php'); ?>
 
 	<section class="container grey-text">
 		<h4 class="center">Sign up</h4>
 		<form class="white" action="index.php" method="POST">
 			<label>Phone Number</label>
-			<input type="text" name="phno" value="<?php echo htmlspecialchars($phno) ?>">
+			<input id="rgphno" type="text" name="phno" value="<?php echo htmlspecialchars($phno) ?>">
 			<div class="red-text"><?php echo $errors['phno']; ?></div>
 			<label>Password</label>
-			<input type="password" name="password" value="<?php echo htmlspecialchars($password) ?>">
+			<input id="rgpass" type="password" name="password" value="<?php echo htmlspecialchars($password) ?>">
 			<div class="red-text"><?php echo $errors['password']; ?></div>
 			<label>College Code</label>
-			<input type="text" name="c_code" value="<?php echo htmlspecialchars($c_code) ?>">
+			<input id="rgcc" type="text" name="c_code" value="<?php echo htmlspecialchars($c_code) ?>">
 			<div class="red-text"><?php echo $errors['c_code']; ?></div>
 			<label>Student Name</label>
-			<input type="text" name="s_name" value="<?php echo htmlspecialchars($s_name) ?>">
+			<input id="rgsname" type="text" name="s_name" value="<?php echo htmlspecialchars($s_name) ?>">
 			<div class="red-text"><?php echo $errors['s_name']; ?></div>
 			<label>Aadhar ID [ only numbers ]</label>
-			<input type="text" name="aadhar" value="<?php echo htmlspecialchars($aadhar) ?>">
+			<input id="rgaadhar" type="text" name="aadhar" value="<?php echo htmlspecialchars($aadhar) ?>">
 			<div class="red-text"><?php echo $errors['aadhar']; ?></div>
 			<label>USN</label>
-			<input type="text" name="reg_no" value="<?php echo htmlspecialchars($reg_no) ?>">
+			<input id="rgusn" type="text" name="reg_no" value="<?php echo htmlspecialchars($reg_no) ?>">
 			<div class="red-text"><?php echo $errors['reg_no']; ?></div>
 			<label>Previous Year Percentage</label>
-			<input type="text" name="prev_year_perc" value="<?php echo htmlspecialchars($prev_year_perc) ?>">
+			<input id="rgperc" type="text" name="prev_year_perc" value="<?php echo htmlspecialchars($prev_year_perc) ?>">
 			<div class="red-text"><?php echo $errors['prev_year_perc']; ?></div>
 			<label>IFSC</label>
-			<input type="text" name="ifsc" value="<?php echo htmlspecialchars($ifsc) ?>">
+			<input id="rgifsc" type="text" name="ifsc" value="<?php echo htmlspecialchars($ifsc) ?>">
 			<div class="red-text"><?php echo $errors['ifsc']; ?></div>
 			<label>Account Number</label>
-			<input type="text" name="acc_no" value="<?php echo htmlspecialchars($acc_no) ?>">
+			<input id="rgaccno" type="text" name="acc_no" value="<?php echo htmlspecialchars($acc_no) ?>">
 			<div class="red-text"><?php echo $errors['acc_no']; ?></div>
 			<label>Bank Name</label>
-			<input type="text" name="b_name" value="<?php echo htmlspecialchars($b_name) ?>">
+			<input id="rgbkname" type="text" name="b_name" value="<?php echo htmlspecialchars($b_name) ?>">
 			<div class="red-text"><?php echo $errors['b_name']; ?></div>
 
 			<div class="center">
-				<input type="submit" name="submit" value="Submit" class="btn brand z-depth-0">
+				<input id="rgsbtn" type="submit" name="submit" value="Submit" class="btn brand z-depth-0">
 			</div>
 		</form>
 	</section>

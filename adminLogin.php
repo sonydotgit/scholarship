@@ -20,7 +20,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE. 
+SOFTWARE.
 -->
 
 <?php
@@ -31,7 +31,7 @@ SOFTWARE.
 	$errors = array('u_name' => '', 'password' => '');
 
 	if(isset($_POST['submit'])){
-		
+
 		// check college code
 		if(empty($_POST['u_name'])){
 			$errors['u_name'] = 'Username is required';
@@ -83,7 +83,7 @@ SOFTWARE.
 			mysqli_free_result($pass);
 			mysqli_free_result($c_user);
 			mysqli_close($conn);
-		
+
 		}
 
 	} // end POST check
@@ -92,20 +92,20 @@ SOFTWARE.
 
 <!DOCTYPE html>
 <html>
-	
+
 	<?php include('templates/header.php'); ?>
 
 	<section class="container grey-text">
 		<h4 class="center">Administrator</h4>
 		<form class="white" action="adminLogin.php" method="POST">
 			<label>Username</label>
-			<input type="text" name="u_name" value="<?php echo htmlspecialchars($u_name) ?>">
+			<input id="uadmin" type="text" name="u_name" value="<?php echo htmlspecialchars($u_name) ?>">
 			<div class="red-text"><?php echo $errors['u_name']; ?></div>
 			<label>Password</label>
-			<input type="password" name="password" value="<?php echo htmlspecialchars($password) ?>">
+			<input id="padmin" type="password" name="password" value="<?php echo htmlspecialchars($password) ?>">
 			<div class="red-text"><?php echo $errors['password']; ?></div>
 			<div class="center">
-				<input type="submit" name="submit" value="Submit" class="btn brand z-depth-0">
+				<input id="adminsbtn" type="submit" name="submit" value="Submit" class="btn brand z-depth-0">
 			</div>
 		</form>
 	</section>
